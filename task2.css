@@ -1,0 +1,98 @@
+
+header{
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    background: white;
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    margin: 10px;
+    padding:1%;
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20201012/pngtree-white-cloud-on-blue-sky-weather-background-image_410050.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: serif;
+    font-size: 25px;
+}
+.container {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+   
+.label {
+    margin-bottom: 5px;
+}
+   
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+   
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+   
+button:hover {
+    background-color: #0056b3;
+}
+   
+.cards {
+    font-display:inherit ;
+    display:-moz-box;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+   
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+li {
+    margin-bottom: 10px;
+}
+   
+h2 {
+    font-size: 20px;
+}
+   
+p {
+    font-size: 18px;
+    font-weight: bolder;
+}
+footer {
+    background-color: white;
+    color: mediumblue;
+    text-align: center;
+   }
+   
+footer a {
+    color: mediumblue;
+    margin: 0 10px;
+    text-decoration: none;
+}
+footer a:hover {
+    color: white;
+    background-color: mediumblue;
+}

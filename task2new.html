@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Weather Website</title>
+ <link rel="stylesheet" href="task2.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<header>
+    <h1>Weather</h1>
+    <p>One stop to find all location's Weather</p>
+    <p>Just enter your city and find it..</p>
+</header>
+<body>
+<div class="container">
+ <h6 class="label">City Name:</h6>
+ <input type="text" id="city" name="city">
+ <button id="submit"><i class="fa fa-search"></i></button>
+</div>
+<div class="cards"><ul>
+    <li><h2 id="temp"></h2></li>
+    <li><p id="weather"></p></li>
+    <li><p id="humidity"></p></li>
+    <li><p id="wind"></p></li>
+</ul>
+</div>
+ <script>
+    $("#submit").click(function() {
+      var city = $("#city").val();
+      var apiKey = "854a502383246be564e969d1ac6a5f14"; // Replace with your OpenWeatherMap API key
+
+      $.ajax({
+        url: "https://api.openweathermap.org/data/2.5/weather",
+        type: "GET",
+        data: {
+          q: city,
+          appid: apiKey,
+          units: "metric"
+        },
+        success: function(data) {
+          var temp = data.main.temp;
+          var weather = data.weather[0].description;
+          var humidity = data.main.humidity;
+          var windSpeed = data.wind.speed;
+
+
+          $("#temp").text("Temperature: " + temp + "°C");
+          $("#weather").text("Weather: " + weather);
+          $("#humidity").text("Humidity:" + humidity + "%");
+          $("#wind").text("Wind Speed: " + windSpeed + " km/hr");
+        },
+        error: function(err) {
+          console.log(err);
+        }
+      });
+    });
+ </script>
+</body>
+<footer>
+    <div>
+      <a href="https://www.linkedin.com/in/sk-yohesha-aiml">LinkedIn</a>
+      <a href="https://github.com/YOHESHA10SKY">GitHub</a>
+    </div>
+</footer>
+</html>
